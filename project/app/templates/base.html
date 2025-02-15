@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9JoMGF2mV3k+Ht5T2s4zOEmow3a91lyHggbAt" crossorigin="anonymous"></script>	
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<title>Library</title>
+		<div class="lib">
+		<img src="{% static 'media/lib.png'%}"></div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="base.html">BOOKS</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="Finished_books.html">Finished books <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="Unfinished_books.html">Unfinished Books</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" id="navbarDropdown" target="_blank" tarole="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Dropdown
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="course.html">Course books</a>
+				  <a class="dropdown-item" href="General_books.html">General books</a>
+				  <div class="dropdown-divider"></div>
+				</div>
+			  </li>
+			</ul>
+			
+			<form class="form-inline my-2 my-lg-0">
+			  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="location.href='profile1.html'">Profile</button>
+			</form>
+		  </div>
+		     <!-- Authentication Links -->
+			 <ul class="navbar-nav ml-auto">
+				{% if user.is_authenticated %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'logout' %}">Logout</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'login' %}">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'register' %}">Register</a>
+					</li>
+				{% endif %}
+			</ul>
+		</div>
+		</nav>
+	<title>Book Library</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style1.css'%}">
+	</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<div style="text-align: center;">
+	<h1>Book Library</h1>
+	<ul id="book-list">
+		<li>
+			<div class="image-container">
+			<a href="{% static 'The Python Apprentice,.pdf' %}">
+			<img src="{% static 'media/python img.png '%}" alt="Book 1 Cover"></a>
+			<b><h2>Book 1: THE PYTHON APPRENTICE</h2></b>
+			<p>By Robbert SmallShire & Austin Bingham</p></div>
+		</li>
+		<li>
+			<div class="image-container">
+			<a href="{% static 'Linux.pdf' %}">
+			<img src="{% static 'media/linux img.png '%}" alt="Book 2 Cover"></a>
+			<h2>Book 2: Linux for developers</h2>
+			<p>By William "Bo" Rothwekk</p></div>
+		</li>
+		<li>
+			<div class="image-container">
+			<a href="{% static 'Django.pdf' %}">
+			<img src="{% static 'media/django.png' %}" alt="Book 3 Cover"></a>
+			<h2>Book 3: Django for Beginners</h2>
+			<p>By William S.Vincent</p></div>
+		</li>
+		<li>
+			<div class="image-container">
+			<a href="{% static 'SDLC.pdf' %}">
+			<img src="{% static 'media/SDLC.png' %}" alt="Book 3 Cover"></a>
+			<h2>Book 4: SDLC</h2>
+			<p>By John F.Dooly</p></div>
+		</li>
+		<li>
+			<div class="image-container">
+			<a href="{% static 'SDLC A-Z.pdf' %}">
+			<img src="{% static 'media/SDLC A-Z.png' %}" alt="Book 3 Cover"></a>
+			<h2>Book 5: SOFTWARE DEVELOPMENT LIFE CYCLE A-Z</h2>
+			<p>By Olga Filipova  Rui Vilavo</p></div>
+		</li>
+	</ul>
+	</div>
+</body>
+</html>

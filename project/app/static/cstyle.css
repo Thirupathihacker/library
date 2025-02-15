@@ -1,0 +1,62 @@
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* light gray background */
+  }
+  .lib1 {
+    height: 30vh; /* Set the height to 100 viewport height */
+    width: 100%; /* Set the width to 100% */
+  }
+  
+  .lib1 img {
+    height: 100%; /* Set the image height to 100% of its parent */
+    width: 100%; /* Set the image width to auto to maintain aspect ratio */
+    object-fit: cover; /* Scale the image to cover the entire container */
+  }
+  
+  
+  h2 {
+    text-align: center;
+    color: #333; /* dark gray text */
+    margin-bottom: 20px;
+  }
+  
+  /* List Styles */
+  
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #337ab7; /* blue link color */
+    transition: color 0.2s ease;
+  }
+  
+  li a:hover {
+    color: #23527c; /* darker blue on hover */
+  }
+  
+  li a::before {
+    content: "\25B6"; /* arrow symbol */
+    margin-right: 10px;
+    color: #337ab7; /* blue arrow color */
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+  }

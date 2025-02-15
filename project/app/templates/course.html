@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+    <title>Course books</title>
+    <div class="lib1">
+    <img src="{% static 'media/pics.png' %}"></div>
+    <link rel="stylesheet" type="text/css" href="{% static 'cstyle.css' %}">
+</head>
+<body>
+    <h2> These are the avaiable course books </h2>
+    <li>
+        <a href="{% static 'The Python Apprentice,.pdf' %}" target="_blank">PYTHON</a><br>
+    </li>
+    <li>
+        <a href="{% static 'Linux.pdf' %}" target="_blank">Linux</a><br>
+    </li>
+    <li>    
+        <a href="{% static 'SDLC.pdf' %}" target="_blank">SDLC</a>
+    </li>
+</body>
+</html>

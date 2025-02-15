@@ -1,0 +1,124 @@
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #a09c9c
+}
+.lib {
+  height: 20vh; /* Set the height to 100 viewport height */
+  width: 100%; /* Set the width to 100% */
+}
+
+.lib img {
+  height: 100%; /* Set the image height to 100% of its parent */
+  width: 100%; /* Set the image width to auto to maintain aspect ratio */
+  object-fit: cover; /* Scale the image to cover the entire container */
+}
+
+h1 {
+  color: #080808;  
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #0c0c0c;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-style:italic;
+}
+
+p {
+  color: #999;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Navigation Bar Styles */
+
+.navbar {
+  background-color: #b8a2a2;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c01b1b;
+}
+
+.nav-link {
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #333;
+}
+
+.dropdown-menu {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.dropdown-item {
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  color: #333;
+  background-color: #f2f2f2;
+}
+
+/* Book List Styles */
+
+#book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#book-list li {
+  margin-bottom: 20px;
+}
+
+.image-container {
+  float: left;
+  margin: 30px;
+  width: 200px; /* increased width to create a bigger container */
+  height: 200px; /* set height to match width for a square shape */
+  border-radius: 20px; /* add circular edges */
+  padding: 20px; /* add padding to create space around the image */
+  background-color: #ca4a4a; /* add a background color to the container (optional) */
+  box-shadow: 0 0 20px rgba(7, 7, 7, 0.726); /* add a subtle box shadow (optional) */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.image-container a {
+  text-decoration: none;
+  color: #0f0808;
+}
+
+.image-container a:hover {
+  color: #070707;
+}
+
+.image-container h2 {
+  margin-top: 20px;
+}
+
+.image-container p {
+  margin-bottom: 5px;
+}
